@@ -96,10 +96,10 @@ void handle_raw_ip_packet(const u_char*pkt_data,int pkt_len){
     printf("Destination IP: %s\n", dst_ip);
     if(strcmp(src_ip,_ipaddr)==0){
         //说明是本机发出的包
-        printf("Packet sent from %s to %s\n", src_ip, dst_ip);
+        printf("%s    =>    %s\n",src_ip, dst_ip);
     }else{
         //说明是本机接收的包
-        printf("Packet received from %s to %s\n", src_ip, dst_ip);
+        printf("%s    <=    %s\n",src_ip, dst_ip);
     }
 }
 
